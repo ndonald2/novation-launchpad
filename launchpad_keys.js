@@ -63,7 +63,7 @@ keysPage.onSceneButton = function(row, isPressed)
 
 keysPage.onLeft = function(isPressed)
 {
-   if (isPressed)
+   if (isPressed && activeNoteMap.canScrollLeft())
    {
       activeNoteMap.scrollLeft();
    }
@@ -71,7 +71,7 @@ keysPage.onLeft = function(isPressed)
 
 keysPage.onRight = function(isPressed)
 {
-   if (isPressed)
+   if (isPressed && activeNoteMap.canScrollRight())
    {
       activeNoteMap.scrollRight();
    }
@@ -79,7 +79,7 @@ keysPage.onRight = function(isPressed)
 
 keysPage.onUp = function(isPressed)
 {
-   if (isPressed)
+   if (isPressed && activeNoteMap.canScrollUp())
    {
       activeNoteMap.scrollUp();
    }
@@ -87,7 +87,7 @@ keysPage.onUp = function(isPressed)
 
 keysPage.onDown = function(isPressed)
 {
-   if (isPressed)
+   if (isPressed && activeNoteMap.canScrollDown())
    {
       activeNoteMap.scrollDown();
    }

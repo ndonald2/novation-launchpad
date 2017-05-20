@@ -129,7 +129,14 @@ smallDrumNoteMap.cellToKey = function(x, y)
    var subY = y & 3;
    var page = (y < 4 ? 2 : 0) + (x >= 4 ? 1 : 0);
 
-   return this.rootKey + (3 - subY) * 4 + subX + 16 * page;
+   var key = this.rootKey + (3 - subY) * 4 + subX + 16 * page;
+
+   if (key >= 0 && key < 128)
+   {
+      return key;
+   }
+
+   return -1;
 };
 
 smallDrumNoteMap.keyIsBlack = function(key)
@@ -184,7 +191,15 @@ largeDrumNoteMap.cellToKey = function(x, y)
 {
     var lx = x >> 1;
     var ly = y >> 1;
-    return this.rootKey + (3 - ly) * 4 + lx;
+
+    var key = this.rootKey + (3 - ly) * 4 + lx;
+
+    if (key >= 0 && key < 128)
+    {
+       return key;
+    }
+
+    return -1;
 };
 
 largeDrumNoteMap.keyIsBlack = function(key)
