@@ -1,7 +1,7 @@
 
 loadAPI(1);
 
-host.defineController("Novation", "Launchpad", "1.0", "DC7C601D-C6D9-4627-875C-D0AA527BA73A");
+host.defineController("Novation", "Launchpad (virek)", "1.0", "DC7C601D-C6D9-4627-875C-D0AA527BA73A");
 host.defineMidiPorts(1, 1);
 host.addDeviceNameBasedDiscoveryPair(["Launchpad"], ["Launchpad"]);
 host.addDeviceNameBasedDiscoveryPair(["Launchpad S"], ["Launchpad S"]);
